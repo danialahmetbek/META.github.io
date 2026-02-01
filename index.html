@@ -1,56 +1,99 @@
-cat > index.html << 'EOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>META — Backend Developer</title>
+    <title>META — Backend Developer & AI Automation Specialist</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Backend developer specializing in AI-powered lead generation pipelines. Node.js, Python/Django, GPT-4o-mini, Claude 3.5 Sonnet.">
 </head>
 <body>
     <header>
-        <h1>META</h1>
-        <p>Backend Developer | Node.js | Python/Django | AI Pipelines</p>
+        <nav>
+            <a href="#projects">Projects</a>
+            <a href="#tech">Tech</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="hero-tagline">
+            <h1>META</h1>
+            <p>Backend Developer<br><strong>AI Pipelines</strong> • Node.js • Python/Django • <em>Lead Generation Automation</em></p>
+        </div>
     </header>
     
-    <section class="hero">
-        <h2>Building Scalable AI Systems</h2>
-        <p>Lead Generation Pipeline: Places API → GPT scraping → Claude emails → SMTP tracking</p>
-    </section>
+    <main>
+        <section class="hero">
+            <h2>AI-Powered Lead Generation at Scale</h2>
+            <p>Complete automation pipeline:<br>
+            <strong>Google Places API</strong> → GPT-4o-mini scraping → <strong>Claude 3.5</strong> scoring → SMTP outreach</p>
+            <div class="metrics">
+                <span>1000+ leads processed</span>
+                <span>60% conversion rate</span>
+                <span>50% AI probability filter</span>
+            </div>
+        </section>
+        
+        <section class="tech-stack" id="tech">
+            <h3>Tech I Master</h3>
+            <div class="tech-grid">
+                <span class="tech-tag primary">Node.js</span>
+                <span class="tech-tag primary">Python</span>
+                <span class="tech-tag primary">Django REST</span>
+                <span class="tech-tag ai">GPT-4o-mini</span>
+                <span class="tech-tag ai">Claude 3.5 Sonnet</span>
+                <span class="tech-tag cloud">Google Cloud Tasks</span>
+                <span class="tech-tag">Cheerio</span>
+                <span class="tech-tag">Nodemailer</span>
+                <span class="tech-tag db">PostgreSQL</span>
+            </div>
+        </section>
+        
+        <section class="projects" id="projects">
+            <h2>Featured Projects</h2>
+            <p class="projects-intro">Click for full case studies with architecture, metrics & code</p>
+            <div class="project-grid">
+                <div class="project-card featured">
+                    <div class="project-icon">🎯</div>
+                    <h3>Lead Generation Pipeline</h3>
+                    <p>5-stage AI system:<br>
+                    • 2km grid search (40-batch)<br>
+                    • GPT email extraction<br>
+                    • Claude 50% scoring<br>
+                    <strong>→ 1000+ leads, 60% conversion</strong></p>
+                    <a href="./leadgen.html" class="btn primary">Case Study →</a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">🐍</div>
+                    <h3>Django REST API</h3>
+                    <p>SaaS platform backend:<br>
+                    • JWT auth • PostgreSQL<br>
+                    • Celery tasks • 10k+ req/day<br>
+                    <span class="confidential">Client NDA</span></p>
+                    <a href="./django.html" class="btn">Details →</a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">🏪</div>
+                    <h3>Retail Processing Backend</h3>
+                    <p>Node.js microservices:<br>
+                    • +40% speed boost<br>
+                    • Real-time inventory<br>
+                    • 25% cost reduction<br>
+                    <span class="confidential">Enterprise NDA</span></p>
+                    <a href="./retail.html" class="btn">Details →</a>
+                </div>
+            </div>
+        </section>
+    </main>
     
-    <section class="tech-stack">
-        <h3>Tech Stack</h3>
-        <div class="tech-grid">
-            <span>Node.js</span><span>Python</span><span>Django</span>
-            <span>GPT-4o-mini</span><span>Claude 3.5</span><span>Google Cloud</span>
-            <span>Cheerio</span><span>Nodemailer</span><span>PostgreSQL</span>
+    <footer id="contact">
+        <h3>Get In Touch</h3>
+        <div class="contact-links">
+            <a href="mailto:your@email.com" class="contact-btn">📧 your@email.com</a>
+            <a href="https://github.com/META" class="contact-btn">🔗 github.com/META</a>
+            <a href="https://t.me/META" class="contact-btn">📱 Telegram @META</a>
         </div>
-    </section>
-    
-    <section class="projects">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>🎯 Lead Generation Pipeline</h3>
-                <p>5-stage AI pipeline: 1000+ leads processed, 60% conversion</p>
-                <a href="./html/projects.html#leadgen" class="btn">View Details</a>
-            </div>
-            <div class="project-card">
-                <h3>🐍 Django REST API</h3>
-                <p>Production API: JWT auth + PostgreSQL + Celery</p>
-                <span class="confidential">Client Project</span>
-            </div>
-            <div class="project-card">
-                <h3>🏪 Retail Backend</h3>
-                <p>Node.js • +40% processing speed</p>
-                <span class="confidential">Confidential</span>
-            </div>
-        </div>
-    </section>
-    
-    <footer>
-        <p>📧 your@email.com | 🔗 <a href="https://github.com/META">github.com/META</a></p>
+        <p class="small">Open for freelance • Based in Hong Kong • Available worldwide</p>
     </footer>
 </body>
 </html>
-
