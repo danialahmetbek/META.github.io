@@ -7,26 +7,49 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.3); }
-        .glass-alt { backdrop-filter: blur(10px); background: rgba(255,255,255,0.18); border: 1px solid rgba(16,185,129,0.3); }
-        /* Белый текст */
-        .white-text { 
-            color: #ffffff !important; 
-            font-weight: 600;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-        }
-        .gradient-bg { background: linear-gradient(135deg, #064e3b 0%, #047857 30%, #065f46 70%, #166534 100%); }
-        .gradient-bg-alt { background: linear-gradient(135deg, #1f2937 0%, #111827 50%, #030712 100%); }
-        .animate-float { animation: float 3s ease-in-out infinite; }
-        .project-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-        .project-card:hover { transform: translateY(-12px) scale(1.02); }
-        .project-card:hover .project-icon { transform: rotate(8deg) scale(1.1); }
-        @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
-        .led-glow { box-shadow: 0 0 20px rgba(16,185,129,0.4); }
-        .led-glow-hover:hover { box-shadow: 0 0 40px rgba(16,185,129,0.6); }
-    </style>
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.3); }
+    .glass-alt { backdrop-filter: blur(10px); background: rgba(255,255,255,0.18); border: 1px solid rgba(16,185,129,0.3); }
+
+    .white-text { 
+        color: #ffffff !important; 
+        font-weight: 600;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    .gradient-bg { background: linear-gradient(135deg, #064e3b 0%, #047857 30%, #065f46 70%, #166534 100%); }
+    .gradient-bg-alt { background: linear-gradient(135deg, #1f2937 0%, #111827 50%, #030712 100%); }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+    .project-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .project-card:hover { transform: translateY(-12px) scale(1.02); }
+    .project-card:hover .project-icon { transform: rotate(8deg) scale(1.1); }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+    .led-glow { box-shadow: 0 0 20px rgba(16,185,129,0.4); }
+    .led-glow-hover:hover { box-shadow: 0 0 40px rgba(16,185,129,0.6); }
+    
+    .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        opacity: 1;
+        transition: opacity 0.8s ease-out;
+    }
+
+    .loading-overlay.blink {
+        opacity: 0.2; /* Моргнет (стеной затемнит) */
+    }
+
+    .loading-overlay.fade-out {
+        opacity: 0;
+        pointer-events: none;
+    }
+</style>
+
 </head>
 <body class="gradient-bg min-h-screen text-gray-100 font-sans overflow-x-hidden">
+<div class="loading-overlay" id="loadingOverlay"></div>
 
 <!-- Header -->
 <header class="glass sticky top-0 z-50 backdrop-blur-xl border-b border-white/30">
@@ -408,9 +431,30 @@
         glows.forEach((glow, index) => {
             glow.style.boxShadow = index % 2 === 0 
                 ? '0 0 20px rgba(16,185,129,0.4)' 
-                : '0 0 30px rgba(16,185,129,0.6)';
+                : '0 0 120px rgba(16,185,129,1)';
         });
-    }, 2000);
+    }, 2300);
+
+    // Loading overlay fade-out
+    document.addEventListener('DOMContentLoaded', function() {
+        const overlay = document.getElementById('loadingOverlay');
+        
+        setTimeout(() => {
+            overlay.classList.add('blink');
+            
+            setTimeout(() => {
+                overlay.classList.remove('blink');
+                
+                setTimeout(() => {
+                    overlay.classList.add('fade-out');
+                    
+                    setTimeout(() => {
+                        overlay.remove();
+                    }, 800);
+                }, 200);
+            }, 1000);
+        }, 1000);
+    });
 </script>
 
 </body>
