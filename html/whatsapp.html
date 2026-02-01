@@ -48,6 +48,12 @@
         table { backdrop-filter: blur(10px); background: var(--glass-alt); border-collapse: separate; border-spacing: 0; border-radius: 24px; overflow: hidden; }
         th { background: rgba(255,255,255,0.05); border-bottom: 1px solid var(--glass-border); }
         tr:hover { background: rgba(255,255,255,0.08); }
+
+        /* Challenge-Solution */
+        .challenge-solution {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(99,102,241,0.1));
+            border: 1px solid rgba(255,255,255,0.1);
+        }
     </style>
 </head>
 <body>
@@ -55,12 +61,19 @@
 <!-- Header -->
 <header class="glass sticky top-0 z-50 backdrop-blur-xl border-b border-white/20">
     <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            <i class="fas fa-bolt"></i> WhatsApp AI Bot
-        </h1>
-        <a href="https://github.com/danialahmetbek/Whatsapp" 
+        <div class="flex items-center gap-4">
+            <a href="../index.html#projects" class="p-2 glass rounded-xl hover:bg-white/30 transition-all duration-300 led-glow-hover hover:scale-105">
+                <i class="fas fa-arrow-left text-xl text-white"></i>
+            </a>
+            <a href="../index.html#projects">
+                <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                    <i class="fas fa-robot mr-2"></i> WhatsApp AI Bot
+                </h1>
+            </a>
+        </div>
+        <a href="https://github.com/danialahmetbek/Whatsapp" target="_blank"
            class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-all">
-            <i class="fab fa-github"></i> View Code
+            <i class="fab fa-github mr-2"></i> View Code
         </a>
     </nav>
 </header>
@@ -71,11 +84,11 @@
     <section class="text-center mb-24 animate-float">
         <div class="inline-flex items-center glass px-10 py-8 rounded-3xl mb-12 max-w-max mx-auto">
             <span class="text-4xl mr-6">🤖</span>
-            <span class="font-black text-3xl">PRODUCTION  PROJECT</span>
+            <span class="font-black text-3xl">PRODUCTION PROJECT</span>
         </div>
         
-        <h1 class="text-7xl md:text-8xl font-black mb-8 gradient-text leading-tight">
-            WhatsApp AI Bot
+        <h1 class="text-7xl md:text-8xl font-black mb-8 leading-tight">
+            <span class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">WhatsApp</span> AI Bot
         </h1>
         
         <div class="glass-alt p-12 rounded-3xl mb-16 max-w-4xl mx-auto">
@@ -108,15 +121,15 @@
             <div class="project-icon w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mb-8 text-3xl shadow-2xl">
                 <i class="fas fa-exclamation-triangle"></i>
             </div>
-            <h3 class="text-3xl font-black mb-6 gradient-text">Emergency Alerts</h3>
-            <p class="text-xl opacity-90 leading-relaxed">Instant Telegram notifications with full accident details</p>
+            <h3 class="text-3xl font-black mb-6 bg-gradient-to-r from-blue-300 to-red-200 bg-clip-text text-transparent">Emergency Alerts</h3>
+            <p class="text-xl opacity-90 leading-relaxed">Instant Whatsapp notifications with full accident details</p>
         </div>
         
         <div class="project-card glass p-10 rounded-3xl hover:shadow-2xl">
             <div class="project-icon w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-3xl flex items-center justify-center mb-8 text-3xl shadow-2xl">
                 <i class="fas fa-user-tie"></i>
             </div>
-            <h3 class="text-3xl font-black mb-6 gradient-text">Lead Capture</h3>
+            <h3 class="text-3xl font-black mb-6 bg-gradient-to-r from-blue-300 to-red-200 bg-clip-text text-transparent">Lead Capture</h3>
             <p class="text-xl opacity-90 leading-relaxed">Auto-collects name, company, area, location data</p>
         </div>
         
@@ -124,7 +137,7 @@
             <div class="project-icon w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-3xl flex items-center justify-center mb-8 text-3xl shadow-2xl">
                 <i class="fas fa-headset"></i>
             </div>
-            <h3 class="text-3xl font-black mb-6 gradient-text">24/7 Tech Support</h3>
+            <h3 class="text-3xl font-black mb-6 bg-gradient-to-r from-blue-300 to-red-200 bg-clip-text text-transparent">24/7 Tech Support</h3>
             <p class="text-xl opacity-90 leading-relaxed">Smart technical request routing</p>
         </div>
         
@@ -132,8 +145,100 @@
             <div class="project-icon w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center mb-8 text-3xl shadow-2xl">
                 <i class="fas fa-frown"></i>
             </div>
-            <h3 class="text-3xl font-black mb-6 gradient-text">Complaint Handling</h3>
+            <h3 class="text-3xl font-black mb-6 bg-gradient-to-r from-blue-300 to-red-200 bg-clip-text text-transparent">Complaint Handling</h3>
             <p class="text-xl opacity-90 leading-relaxed">Intelligent client issue resolution</p>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section class="glass-alt p-16 rounded-4xl mb-24">
+        <h2 class="text-5xl font-black text-center mb-20">📱 <span class="gradient-text">Real Examples</span></h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass p-8 rounded-3xl hover:shadow-2xl transition-all">
+                <div class="flex items-start mb-6">
+                    <div class="w-12 h-12 bg-green-500 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fas fa-car-crash text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold mb-2">🚨 Accident Report</h4>
+                        <p class="text-green-300 font-semibold">newAccident intent</p>
+                    </div>
+                </div>
+                <div class="bg-black/30 p-6 rounded-2xl text-sm leading-relaxed">
+                    <strong>User:</strong> "LED broke down on Alfarabi st. Essentai"<br>
+                    <strong>Bot:</strong> "Emergency registered! Location: Alfarabi, Essentai area. Contact: +123456789"
+                </div>
+            </div>
+            
+            <div class="glass p-8 rounded-3xl hover:shadow-2xl transition-all">
+                <div class="flex items-start mb-6">
+                    <div class="w-12 h-12 bg-blue-500 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fas fa-user-tie text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold mb-2">💼 New Lead</h4>
+                        <p class="text-blue-300 font-semibold">newLead intent</p>
+                    </div>
+                </div>
+                <div class="bg-black/30 p-6 rounded-2xl text-sm leading-relaxed">
+                    <strong>User:</strong> "Interested in putting advertisment on Cityboards."<br>
+                    <strong>Bot:</strong> "Perfect! Name? Company? Location? Period? → Lead created & forwarded to sales!"
+                </div>
+            </div>
+            
+            <div class="glass p-8 rounded-3xl hover:shadow-2xl transition-all">
+                <div class="flex items-start mb-6">
+                    <div class="w-12 h-12 bg-purple-500 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fas fa-headset text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold mb-2">🔧 Tech Support</h4>
+                        <p class="text-purple-300 font-semibold">newTech intent</p>
+                    </div>
+                </div>
+                <div class="bg-black/30 p-6 rounded-2xl text-sm leading-relaxed">
+                    <strong>User:</strong> "What is the model of LEDs?"<br>
+                    <strong>Bot:</strong> "Name? → Tech team assigned instantly"
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge → Solution -->
+    <section class="challenge-solution p-16 rounded-4xl mb-24">
+        <h2 class="text-5xl font-black text-center mb-20">🎯 Challenge → Solution</h2>
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="bg-red-500/20 border-2 border-red-500/50 p-8 rounded-3xl mb-8">
+                    <h3 class="text-3xl font-black mb-6 flex items-center">
+                        <i class="fas fa-exclamation-circle text-3xl mr-4 text-red-400"></i>
+                        THE CHALLENGE
+                    </h3>
+                    <ul class="text-xl space-y-4 opacity-90">
+                        <li><i class="fas fa-minus-circle mr-3 text-red-400"></i>24/7 manual WhatsApp handling</li>
+                        <li><i class="fas fa-minus-circle mr-3 text-red-400"></i>No lead capture automation</li>
+                        <li><i class="fas fa-minus-circle mr-3 text-red-400"></i>Emergency response delays</li>
+                        <li><i class="fas fa-minus-circle mr-3 text-red-400"></i>Fragmented tech support</li>
+                        <li><i class="fas fa-minus-circle mr-3 text-red-400"></i>Manual session tracking</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <div class="bg-green-500/20 border-2 border-green-500/50 p-8 rounded-3xl mb-8">
+                    <h3 class="text-3xl font-black mb-6 flex items-center">
+                        <i class="fas fa-check-circle text-3xl mr-4 text-green-400"></i>
+                        THE SOLUTION
+                    </h3>
+                    <ul class="text-xl space-y-4 opacity-90">
+                        <li><i class="fas fa-check-circle mr-3 text-green-400"></i>AI-powered 24/7 automation</li>
+                        <li><i class="fas fa-check-circle mr-3 text-green-400"></i>Smart lead capture → CRM</li>
+                        <li><i class="fas fa-check-circle mr-3 text-green-400"></i>Instant emergency alerts</li>
+                        <li><i class="fas fa-check-circle mr-3 text-green-400"></i>Intelligent intent routing</li>
+                        <li><i class="fas fa-check-circle mr-3 text-green-400"></i>SHA256 session sync</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -150,7 +255,10 @@
                 E --> G[Cloud Storage<br/>sessions.json]
                 F --> H[Telegram Alerts]
                 F --> I[WhatsApp Templates]
-
+                style A stroke:#2196f3
+                style B stroke:#9c27b0
+                style F stroke:#4caf50
+                style G stroke:#ff9800
         </div>
     </section>
 
@@ -215,13 +323,13 @@
             <a href="mailto:danial.ahmetbek@gmail.com" class="flex-1 px-8 py-6 bg-white text-gray-900 font-bold rounded-2xl text-lg hover:scale-105 transition-all shadow-2xl flex items-center justify-center">
                 <i class="fas fa-envelope mr-3"></i>Contact Me
             </a>
-            <a href="https://github.com/danialahmetbek/Whatsapp" class="flex-1 px-8 py-6 border-2 border-white/50 text-white font-bold rounded-2xl text-lg hover:bg-white/10 transition-all flex items-center justify-center">
+            <a href="https://github.com/danialahmetbek/Whatsapp" target="_blank" class="flex-1 px-8 py-6 border-2 border-white/50 text-white font-bold rounded-2xl text-lg hover:bg-white/10 transition-all flex items-center justify-center">
                 <i class="fab fa-github mr-3"></i>GitHub Repo
             </a>
         </div>
         
         <div class="text-sm text-white/70">
-            <a href="https://www.linkedin.com/in/danial-undefined-73b230385/" class="flex items-center justify-center gap-2 hover:text-white transition-colors text-lg font-semibold">
+            <a href="https://www.linkedin.com/in/danial-akhmetbek-73b230385/" target="_blank" class="flex items-center justify-center gap-2 hover:text-white transition-colors text-lg font-semibold">
                 <i class="fab fa-linkedin"></i> Danial Akhmetbek
             </a>
         </div>
@@ -255,9 +363,9 @@
     window.addEventListener('scroll', () => {
         const header = document.querySelector('header');
         if (window.scrollY > 100) {
-            header.classList.add('shadow-xl', 'bg-white/80');
+            header.classList.add('shadow-xl', 'bg-white/30');
         } else {
-            header.classList.remove('shadow-xl', 'bg-white/80');
+            header.classList.remove('shadow-xl', 'bg-white/30');
         }
     });
 </script>
