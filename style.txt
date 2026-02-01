@@ -1,0 +1,154 @@
+/* DANIAL.dev PORTFOLIO STYLE 2026 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --glass-bg: rgba(255,255,255,0.1);
+    --glass-border: rgba(255,255,255,0.2);
+    --glass-alt: rgba(15,15,25,0.8);
+    --glass-alt-border: rgba(255,255,255,0.1);
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-bg: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #1e293b 100%);
+    --gradient-footer: linear-gradient(135deg, rgba(17,24,39,0.9) 0%, rgba(0,0,0,0.9) 100%);
+    --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-2xl: 0 35px 60px -12px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--gradient-bg);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism Core */
+.glass {
+    backdrop-filter: blur(20px);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-xl);
+}
+
+.glass-alt {
+    backdrop-filter: blur(10px);
+    background: var(--glass-alt);
+    border: 1px solid var(--glass-alt-border);
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(20px);
+}
+
+header.scrolled {
+    background: rgba(15, 15, 25, 0.95);
+}
+
+/* Project Cards */
+.project-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--glass-alt-border);
+}
+
+.project-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: var(--shadow-2xl);
+}
+
+.project-icon {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+    transform: rotate(8deg) scale(1.1);
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--gradient-primary);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-2xl);
+}
+
+/* Flow Arrows */
+.flow-arrow {
+    position: relative;
+}
+
+.flow-arrow::after {
+    content: '';
+    position: absolute;
+    right: -24px;
+    top: 50%;
+    width: 32px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #60a5fa);
+    transform: translateY(-50%);
+}
+
+.flow-arrow:last-child::after {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .flow-arrow::after {
+        display: none;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tables */
+table {
+    backdrop-filter: blur(10px);
+    background: var(--glass-alt);
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+th {
+    background: rgba(255,255,255,0.05);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+tr:hover {
+    background: rgba(255,255,255,0.08);
+}
+

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2B Lead Generation Prototype - Danial Akhmetbek</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-900 via-purple-900 to-black min-h-screen text-white">
+
+<!-- Header -->
+<header class="glass sticky top-0 z-50 backdrop-blur-xl border-b border-white/20">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            <i class="fas fa-bolt"></i> LeadGen Prototype
+        </h1>
+        <a href="https://github.com/danialahmetbek/LeadGenerator" 
+           class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-all">
+            <i class="fab fa-github"></i> View Code
+        </a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="pt-32 pb-20 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+        <div class="inline-flex items-center gap-3 bg-blue-600/20 px-6 py-3 rounded-full mb-8 animate-float">
+            <i class="fas fa-robot text-2xl text-blue-400"></i>
+            <span class="font-mono text-lg">Production Ready Prototype</span>
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            B2B Lead Generation<br>
+            <span class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                Pipeline
+            </span>
+        </h1>
+        
+        <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
+            7x GCP Cloud Run microservices • Google Places API • GPT-4o + Claude Sonnet • 
+            Serverless • 99% success rate
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
+            <a href="#architecture" class="flex-1 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-2xl font-semibold transition-all border border-white/20">
+                <i class="fas fa-sitemap text-blue-400 mr-2"></i>Architecture
+            </a>
+            <a href="#demo" class="flex-1 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-2xl font-semibold transition-all shadow-xl hover:shadow-2xl">
+                <i class="fas fa-play-circle text-white mr-2"></i>Live Demo
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Architecture -->
+<section id="architecture" class="py-24 px-6 bg-white/5 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-20">Pipeline Architecture</h2>
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- Mermaid-like Flow -->
+            <div class="space-y-6">
+                <div class="flex items-center space-x-4 p-6 bg-blue-500/20 rounded-2xl border-l-4 border-blue-400">
+                    <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-xl font-bold">1</div>
+                    <div>
+                        <h3 class="font-semibold text-xl">Company Discovery</h3>
+                        <p class="text-gray-300">Google Places API + customized 2km² grid search</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4 p-6 bg-green-500/20 rounded-2xl border-l-4 border-green-400">
+                    <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center text-xl font-bold">2</div>
+                    <div>
+                        <h3 class="font-semibold text-xl">Contact Extraction + Analysis</h3>
+                        <p class="text-gray-300">Chained Scraping + Analyse with GPT-4o-mini</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4 p-6 bg-purple-500/20 rounded-2xl border-l-4 border-purple-400">
+                    <div class="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center text-xl font-bold">3</div>
+                    <div>
+                        <h3 class="font-semibold text-xl">Lead Filtering</h3>
+                        <p class="text-gray-300">>50% probability threshold</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4 p-6 bg-orange-500/20 rounded-2xl border-l-4 border-orange-400">
+                    <div class="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center text-xl font-bold">4</div>
+                    <div>
+                        <h3 class="font-semibold text-xl"><strong>Personolised</strong> Email Generation</h3>
+                        <p class="text-gray-300">Claude 3.5 Sonnet proposals</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4 p-6 bg-red-500/20 rounded-2xl border-l-4 border-red-400">
+                    <div class="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center text-xl font-bold">5</div>
+                    <div>
+                        <h3 class="font-semibold text-xl">Delivery + Tracking</h3>
+                        <p class="text-gray-300">SMTP + IMAP sync</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tech Stack -->
+            <div>
+                <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                    <i class="fas fa-tools text-blue-400"></i>Tech Stack
+                </h3>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="p-4 bg-white/10 rounded-xl text-center backdrop-blur-sm">
+                        <i class="fas fa-cloud text-3xl text-blue-400 mb-2 block"></i>
+                        <div>GCP Cloud Run</div>
+                        <div class="text-sm text-gray-400">7 Independent Microservices</div>
+                    </div>
+                    <div class="p-4 bg-white/10 rounded-xl text-center backdrop-blur-sm">
+                        <i class="fab fa-google text-3xl text-orange-400 mb-2 block"></i>
+                        <div>Distributed rate limiting</div>
+                        <div class="text-sm text-gray-400">30s/60s intervals</div>
+                    </div>
+                    <div class="p-4 bg-white/10 rounded-xl text-center backdrop-blur-sm">
+                        <i class="fas fa-brain text-3xl text-green-400 mb-2 block"></i>
+                        <div>Pipeline Architecture</div>
+                        <div class="text-sm text-gray-400">Failure → 5 automatic retries</div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Results -->
+<section id="demo" class="py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-12">Key Results</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-8 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-3xl backdrop-blur-sm border border-white/20">
+                <div class="text-4xl font-bold text-green-400 mb-4">99%</div>
+                <div class="text-xl font-semibold mb-2">Success Rate</div>
+                <div class="text-gray-300">Individual failures don't block pipeline</div>
+            </div>
+            
+            <div class="p-8 bg-gradient-to-br from-purple-500/20 to-orange-500/20 rounded-3xl backdrop-blur-sm border border-white/20">
+                <div class="text-4xl font-bold text-purple-400 mb-4">50%+</div>
+                <div class="text-xl font-semibold mb-2">Intent Threshold</div>
+                <div class="text-gray-300">High-value leads only</div>
+            </div>
+            
+            <div class="p-8 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-3xl backdrop-blur-sm border border-white/20">
+                <div class="text-4xl font-bold text-blue-400 mb-4">100+</div>
+                <div class="text-xl font-semibold mb-2">Companies/Run</div>
+                <div class="text-gray-300">Production scale processing</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 1. ARCHITECTURE -->
+<section class="py-24 px-6 bg-white/5">
+    <h2 class="text-4xl font-black text-center mb-12 gradient-text">📸 Live Screenshots</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- ЗАГРУЗИ СЮДА свои скриншоты -->
+        <img src="./images/gathercomp.png" alt="gathercomp dashboard" class="glass rounded-3xl w-full h-64 object-cover">
+        <img src="./images/chatgpt-results.png" alt="GPT extraction" class="glass rounded-3xl w-full h-64 object-cover">
+        <img src="./images/claude-email.png" alt="Generated email" class="glass rounded-3xl w-full h-64 object-cover">
+    </div>
+</section>
+
+<!-- 2. EMAIL EXAMPLE -->
+<section class="py-24 px-6">
+    <h2 class="text-4xl font-black text-center mb-12 gradient-text">📧 Real Generated Emails</h2>
+    <div class="max-w-4xl mx-auto space-y-12">
+        <!-- ПИСЬМО 1 -->
+        <div class="glass p-8 rounded-4xl hover:scale-[1.02] transition-all">
+            <div class="flex items-start gap-6 mb-6">
+                <div class="w-16 h-16 bg-red-500/80 rounded-2xl flex items-center justify-center text-2xl font-bold">📧</div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">2 Different Email Examples</h3>
+                    <div class="flex gap-4 text-sm text-gray-400 mb-4">
+                        <span>From: noreply@leadgen.com</span>
+                        <span>To: info@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass p-8 rounded-4xl group hover:shadow-2xl transition-all">
+    <!-- EMAIL HEADER - всегда виден -->
+    <div class="flex items-start lg:items-center justify-between mb-6 pb-6 border-b border-white/10">
+        <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center text-xl font-bold">
+                📧
+            </div>
+            <div>
+                <h4 class="text-xl font-bold">JTC Group - UAE Fund Administration</h4>
+                <div class="flex flex-wrap gap-4 text-sm text-gray-400 mt-1">
+                    <span>70% AI Match</span>
+                    <span>Claude 3.5 Sonnet</span>
+                    <span>Production Ready</span>
+                </div>
+            </div>
+        </div>
+        <!-- КНОПКА РАСКРЫТИЯ -->
+        <button onclick="toggleEmailContent(this)" class="p-3 rounded-2xl bg-white/10 hover:bg-white/20 transition-all flex items-center gap-2 border border-white/20">
+            <i class="fas fa-chevron-down text-lg transition-transform duration-300 chevron-icon"></i>
+            <span class="font-medium">Show Email</span>
+        </button>
+    </div>
+
+    <!-- СОДЕРЖИМОЕ ПИСЬМА - СКРЫТО ПО УМОЛЧАНИЮ -->
+    <div class="email-content hidden overflow-hidden transition-all duration-500">
+        <!-- SUBJECT -->
+        <div class="bg-gradient-to-r from-blue-500/20 to-purple-500/20 p-4 rounded-2xl border border-blue-500/30 mb-6">
+            <div class="flex items-center gap-3 mb-2">
+                <i class="fas fa-subject text-blue-400"></i>
+                <span class="font-mono text-lg font-semibold text-blue-200">Subject</span>
+            </div>
+            <div class="font-mono text-xl">A Solution for Streamlined Long-Term Accommodation in the UAE</div>
+        </div>
+
+        <!-- EMAIL BODY -->
+        <div class="prose prose-lg max-w-none text-gray-100 leading-relaxed mb-8 p-6 bg-black/10 rounded-3xl">
+            <pre style="white-space: pre-wrap; margin: 0; font-size: 15px; line-height: 1.6;">
+Dear JTC Group,
+
+Having reviewed your company's information, I'm impressed by your global presence and commitment to client satisfaction. Your expertise in fund administration and corporate services is truly commendable.
+
+However, I've noticed potential challenges in managing long-term accommodation for your international clients and employees in the UAE. This process can be time-consuming and costly, potentially impacting your operational efficiency.
+
+estaie offers a tailored solution to address these concerns:
+
+1. Cost Savings: Our AI-driven dynamic pricing can reduce accommodation costs by up to 32% for stays between 15-365 nights.
+2. Diverse Options: We provide access to hotels, serviced apartments, and Airbnbs, catering to various preferences and budgets.
+3. Simplified Booking: Our user-friendly 5-step online process streamlines the traditionally complex booking journey for extended stays.
+4. Transparency: We offer a single consolidated invoice with no hidden charges, covering housing, utilities, and cleaning.
+
+Our services are particularly suited for JTC Group's needs, offering flexibility without requiring national IDs, making extended stays more accessible for your global clientele. We've helped similar companies achieve up to 55% cost savings while improving employee satisfaction.
+
+To explore available options, please visit http://bit.ly/3ZGue0b or contact us via WhatsApp at https://wa.me/971585787073?text=Hi, I am interested in a long stay booking with estaie for a personalized discussion.
+
+Best regards,
+Yertay Ahmetbek
+Estaie.com - flexible long-term accommodation in the UAE
+Mobile: +971555944216
+</pre>
+        </div>
+    </div>
+</div>
+            <!-- ЗАГРУЗИ СКРИН ПИСЬМА -->
+            <img src="../images/email.png" alt="Email preview" class="rounded-3xl w-full">
+        </div>
+    </div>
+</section>
+
+<!-- 3. ANALYSIS CSV -->
+<section class="py-24 px-6 bg-white/3">
+    <h2 class="text-4xl font-black text-center mb-12 gradient-text">📊 Prototype Results</h2>
+    <div class="max-w-4xl mx-auto">
+        <div class="glass-alt p-8 rounded-4xl mb-8">
+            <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                <i class="fas fa-chart-bar text-green-400"></i> Real Pipeline Run
+            </h3>
+            <div class="grid md:grid-cols-2 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-black text-blue-400 mb-2">837</div>
+                    <div class="text-gray-300">Companies Found</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-black text-green-400 mb-2">213</div>
+                    <div class="text-gray-300">Emails sent to High-value Leads</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- CTA -->
+<section class="py-24 px-6 bg-gradient-to-r from-blue-600/90 to-purple-600/90">
+    <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Automate Your Leads?</h2>
+        <p class="text-xl text-blue-100 mb-12 leading-relaxed">
+            Production prototype. Battle-tested architecture. 
+            Deployable today.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:danial.ahmetbek@gmail.com" class="flex-1 px-8 py-6 bg-white text-gray-900 font-bold rounded-2xl text-lg hover:scale-105 transition-all shadow-2xl">
+                <i class="fas fa-envelope mr-3"></i>Contact Me
+            </a>
+            <a href="https://github.com/danialahmetbek/LeadGenerator" class="flex-1 px-8 py-6 border-2 border-white/50 text-white font-bold rounded-2xl text-lg hover:bg-white/10 transition-all">
+                <i class="fab fa-github mr-3"></i>GitHub Repo
+            </a>
+        </div>
+        
+        <div class="mt-16 text-sm text-blue-200">
+            <a href="https://www.linkedin.com/in/danial-undefined-73b230385/" class="flex items-center justify-center gap-2 hover:text-white transition-colors">
+                <i class="fab fa-linkedin"></i> Danial Akhmetbek
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    // 
+    function toggleEmailContent(button) {
+        const content = button.parentElement.parentElement.querySelector('.email-content');
+        const icon = button.querySelector('.chevron-icon');
+        
+        if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            content.style.maxHeight = content.scrollHeight + 'px';
+            icon.style.transform = 'rotate(180deg)';
+            button.querySelector('span').textContent = 'Hide Email';
+        } else {
+            content.style.maxHeight = '0px';
+            setTimeout(() => content.classList.add('hidden'), 300);
+            icon.style.transform = 'rotate(0deg)';
+            button.querySelector('span').textContent = 'Show Email';
+        }
+    }
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) {
+            header.classList.add('shadow-xl', 'bg-white/80');
+        } else {
+            header.classList.remove('shadow-xl', 'bg-white/80');
+        }
+    });
+</script>
+
+</body>
+</html>

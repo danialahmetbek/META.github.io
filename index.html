@@ -3,91 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>META — Backend Developer & AI Automation Specialist</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Backend developer specializing in AI-powered automation pipelines. Node.js, Python/Django, GPT-4o-mini, Claude 3.5 Sonnet.">
+    <title>DANIAL.dev — Backend Developer & AI Automation Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .glass { backdrop-filter: blur(20px); background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); }
+        .glass-alt { backdrop-filter: blur(10px); background: rgba(15,15,25,0.8); border: 1px solid rgba(255,255,255,0.1); }
+        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #1e293b 100%); }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+        @keyframes float { 0%,100%{transform:translateY(0px);} 50%{transform:translateY(-8px);} }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="#projects">Projects</a>
-            <a href="#tech">Tech</a>
-            <a href="#contact">Contact</a>
+<body class="gradient-bg min-h-screen text-white font-sans overflow-x-hidden">
+
+<!-- Header -->
+<header class="glass sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-xl">
+                <i class="fas fa-bolt text-xl"></i>
+            </div>
+            <h1 class="text-2xl font-black gradient-text">DANIAL<span class="text-white">.dev</span></h1>
+        </div>
+        <nav class="flex gap-6 text-sm">
+            <a href="#projects" class="hover:text-blue-400 transition-colors px-4 py-2 rounded-xl hover:bg-white/10">Projects</a>
+            <a href="#contact" class="hover:text-blue-400 transition-colors px-4 py-2 rounded-xl hover:bg-white/10">Contact</a>
         </nav>
-        <div class="hero-tagline">
-            <h1>META</h1>
-            <p>Backend Developer<br><strong>AI Pipelines</strong> • Node.js • Python/Django</p>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<main class="pt-32 pb-24 px-6">
+    <section class="max-w-4xl mx-auto text-center">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-3 bg-blue-500/20 px-8 py-4 rounded-3xl mb-12 glass border border-blue-500/30 animate-float">
+            <i class="fas fa-code text-2xl text-blue-400"></i>
+            <span class="font-mono text-xl font-semibold">Backend Developer • AI Automation</span>
         </div>
-    </header>
-    
-    <main>
-        <section class="hero">
-            <h2>I Build Scalable Backend Systems</h2>
-            <p>AI-powered automation • REST APIs • Real-time processing<br>
-            From lead generation pipelines to enterprise-grade backends</p>
-        </section>
-        
-        <section class="tech-stack" id="tech">
-            <h3>Tech I Master</h3>
-            <div class="tech-grid">
-                <span class="tech-tag primary">Node.js</span>
-                <span class="tech-tag primary">Python</span>
-                <span class="tech-tag primary">Django REST</span>
-                <span class="tech-tag ai">GPT-4o-mini</span>
-                <span class="tech-tag ai">Claude 3.5 Sonnet</span>
-                <span class="tech-tag cloud">Google Cloud Tasks</span>
-                <span class="tech-tag">Cheerio</span>
-                <span class="tech-tag">Nodemailer</span>
-                <span class="tech-tag db">PostgreSQL</span>
-            </div>
-        </section>
-        
-        <section class="projects" id="projects">
-            <h2>Featured Projects</h2>
-            <p class="projects-intro">Click for full technical breakdowns and architecture</p>
-            <div class="project-grid">
-                <div class="project-card featured">
-                    <div class="project-icon">🎯</div>
-                    <h3>Lead Generation Pipeline</h3>
-                    <p>5-stage AI system:<br>
-                    • Google Places API (2km grid, 40-batch)<br>
-                    • GPT-4o-mini email extraction<br>
-                    • Claude 3.5 scoring (50% threshold)<br>
-                    • Automated SMTP outreach</p>
-                    <a href="./leadgen.html" class="btn primary">Case Study →</a>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-icon">🐍</div>
-                    <h3>Django REST API</h3>
-                    <p>Production SaaS backend:<br>
-                    • JWT authentication<br>
-                    • PostgreSQL + Celery<br>
-                    • Scalable task processing</p>
-                    <a href="./django.html" class="btn">Details →</a>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-icon">🏪</div>
-                    <h3>Retail Processing Backend</h3>
-                    <p>Node.js microservices:<br>
-                    • Real-time inventory sync<br>
-                    • High-throughput processing<br>
-                    • Production deployment</p>
-                    <a href="./retail.html" class="btn">Details →</a>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer id="contact">
-        <h3>Get In Touch</h3>
-        <div class="contact-links">
-            <a href="mailto:your@email.com" class="contact-btn">📧 your@email.com</a>
-            <a href="https://github.com/META" class="contact-btn">🔗 github.com/META</a>
-            <a href="https://t.me/META" class="contact-btn">📱 Telegram @META</a>
+
+        <!-- Main Title -->
+        <h1 class="text-5xl md:text-7xl font-black mb-8 leading-tight">
+            Backend Developer<br>
+            <span class="gradient-text">Scalable Automation</span>
+        </h1>
+
+        <!-- Tagline -->
+        <p class="text-xl md:text-2xl text-gray-300 mb-16 max-w-2xl mx-auto leading-relaxed">
+            Complex Workflow Automation • GCP Serverless • Client-server deployments • Async API orchestration
+        </p>
+
+        <!-- CTA -->
+        <div class="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
+            <a href="#projects" class="group flex-1 px-10 py-6 glass-alt hover:bg-white/20 rounded-3xl font-bold text-lg transition-all border border-white/20 flex items-center justify-center gap-3 hover:scale-[1.02]">
+                <i class="fas fa-rocket text-blue-400 group-hover:-rotate-12 transition-transform"></i>
+                View Projects
+            </a>
+            <a href="#contact" class="group flex-1 px-10 py-6 bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 rounded-3xl font-bold text-lg shadow-2xl transition-all flex items-center justify-center gap-3 hover:shadow-3xl">
+                <i class="fas fa-envelope text-white"></i>
+                Get In Touch
+            </a>
         </div>
-        <p class="small">Open for freelance • Based in Hong Kong • Available worldwide</p>
-    </footer>
+    </section>
+</main>
+
+<!-- Projects Section -->
+<section id="projects" class="py-24 px-6 bg-white/3">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-black mb-6 gradient-text">Featured Projects</h2>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">Production systems built for real clients</p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            
+            <!-- Featured Project -->
+            <div class="glass p-8 rounded-4xl hover:scale-[1.05] transition-all group border-2 border-blue-500/30 hover:border-blue-500 shadow-2xl hover:shadow-3xl">
+                <div class="project-icon mb-6">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl flex items-center justify-center text-3xl font-black mx-auto group-hover:rotate-6 transition-transform shadow-2xl">
+                        🎯
+                    </div>
+                </div>
+                <h3 class="text-2xl font-black mb-4 gradient-text group-hover:translate-x-2 transition-transform">Lead Generation Pipeline</h3>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Full 7-stage system:<br>
+                    <span class="font-mono text-blue-400">• Places API (Customized)</span><br>
+                    <span class="font-mono text-green-400">• OpenAI + Chained Scraping</span><br>
+                    <span class="font-mono text-purple-400">• Claude 3.5 (50% filter)</span><br>
+                    <span class="font-mono text-orange-400">• Nodemailer SMTP outreach</span>
+                </p>
+                <a href="./html/leadgen.html" class="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-2xl font-bold transition-all shadow-xl hover:shadow-2xl group-hover:translate-x-4">
+                    <i class="fas fa-arrow-right"></i>
+                    Case Study →
+                </a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="glass p-8 rounded-3xl hover:scale-[1.02] transition-all group border border-white/20 hover:border-green-500/50 shadow-xl">
+                <div class="project-icon mb-6">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center text-3xl font-black mx-auto group-hover:rotate-6 transition-transform shadow-xl">
+                        💬
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors">WhatsApp Bot</h3>
+                <p class="text-gray-300 mb-6 leading-relaxed text-sm">
+                    Client's WhatsApp:<br>
+                    • 4 business intents processing<br>
+                    • Dialogflow CX AI<br>
+                    • Google Cloud webhook routing
+                </p>
+                <a href="./html/whatsapp.html" class="inline-flex items-center gap-3 px-6 py-3 glass-alt hover:bg-white/20 rounded-2xl font-semibold transition-all border border-white/30 group-hover:translate-x-2">
+                    <i class="fas fa-arrow-right"></i>
+                    Details →
+                </a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="glass p-8 rounded-3xl hover:scale-[1.02] transition-all group border border-white/20 hover:border-orange-500/50 shadow-xl">
+                <div class="project-icon mb-6">
+                    <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-3xl flex items-center justify-center text-3xl font-black mx-auto group-hover:rotate-6 transition-transform shadow-xl">
+                        ⚡
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-orange-400 transition-colors">LED Content Manager</h3>
+                <p class="text-gray-300 mb-6 leading-relaxed text-sm">
+                    Client's server:<br>
+                    • 60+ displays batch upload<br>
+                    • Complex upload orchestration<br>
+                    • SpinetiX API
+                </p>
+                <a href="./html/led.html" class="inline-flex items-center gap-3 px-6 py-3 glass-alt hover:bg-white/20 rounded-2xl font-semibold transition-all border border-white/30 group-hover:translate-x-2">
+                    <i class="fas fa-arrow-right"></i>
+                    Details →
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Stack -->
+<section class="py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-black mb-20 gradient-text">Tech Stack</h2>
+        
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="glass-alt p-8 rounded-3xl">
+                <i class="fab fa-node-js text-4xl text-green-400 mb-6 block"></i>
+                <h3 class="text-xl font-bold mb-4">Node.js v20+</h3>
+                <p class="text-gray-300">Production serverless microservices</p>
+            </div>
+            <div class="glass-alt p-8 rounded-3xl">
+                <i class="fas fa-cloud text-4xl text-blue-400 mb-6 block"></i>
+                <h3 class="text-xl font-bold mb-4">GCP Serverless</h3>
+                <p class="text-gray-300">Cloud Run • Tasks • Storage</p>
+            </div>
+            <div class="glass-alt p-8 rounded-3xl">
+                <i class="fas fa-brain text-4xl text-purple-400 mb-6 block"></i>
+                <h3 class="text-xl font-bold mb-4">AI/ML APIs</h3>
+                <p class="text-gray-300">GPT-4o-mini • Claude 3.5 Sonnet</p>
+            </div>
+            <div class="glass-alt p-8 rounded-3xl">
+                <i class="fas fa-database text-4xl text-orange-400 mb-6 block"></i>
+                <h3 class="text-xl font-bold mb-4">Async Orchestration</h3>
+                <p class="text-gray-300">API chaining • Web scraping • Rate limiting</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Footer -->
+<footer id="contact" class="py-24 px-6 bg-gradient-to-r from-gray-900/80 to-black/80 border-t border-white/10">
+    <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-black mb-12 gradient-text">Get In Touch</h2>
+        
+        <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Open for freelance • Production deployments • Based in Hong Kong
+        </p>
+        
+        <div class="grid md:grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
+            <a href="mailto:danial.ahmetbek@gmail.com" class="group glass-alt p-6 rounded-3xl hover:bg-white/20 transition-all flex items-center justify-center gap-4 hover:scale-105 shadow-xl border border-white/20">
+                <i class="fas fa-envelope text-2xl text-green-400 group-hover:-rotate-12 transition-transform"></i>
+                <span class="font-bold">My mail</span>
+            </a>
+            
+            <a href="https://github.com/danialahmetbek" class="group glass-alt p-6 rounded-3xl hover:bg-white/20 transition-all flex items-center justify-center gap-4 hover:scale-105 shadow-xl border border-white/20" target="_blank">
+                <i class="fab fa-github text-2xl text-gray-400 group-hover:text-white transition-colors"></i>
+                <span class="font-bold">danialahmetbek</span>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/danial-undefined-73b230385/" class="group glass-alt p-6 rounded-3xl hover:bg-white/20 transition-all flex items-center justify-center gap-4 hover:scale-105 shadow-xl border border-white/20" target="_blank">
+                <i class="fab fa-linkedin text-2xl text-blue-400 group-hover:-rotate-12 transition-transform"></i>
+                <span class="font-bold">Danial</span>
+            </a>
+        </div>
+        
+        <div class="glass-alt p-8 rounded-3xl max-w-2xl mx-auto">
+            <p class="text-lg text-gray-400 mb-4">Ready to automate your workflows</p>
+            <p class="text-sm text-gray-500">© 2026 Danial Akhmetbek • Hong Kong</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) {
+            header.style.background = 'rgba(15, 15, 25, 0.95)';
+        } else {
+            header.classList.add('glass');
+        }
+    });
+
+    // Project card hover animations
+    document.querySelectorAll('.project-card').forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+    });
+</script>
+
 </body>
 </html>
