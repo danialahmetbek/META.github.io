@@ -306,56 +306,70 @@
     </section>
 
 
-    <!-- Examples Section -->
     <section class="glass-alt p-16 rounded-4xl mb-24">
         <h2 class="text-5xl font-black text-center mb-20">📱 <span class="gradient-text">Real Examples</span></h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="glass p-8 rounded-3xl hover:shadow-2xl transition-all">
-                <div class="flex items-start mb-6">
-                    <div class="w-12 h-12 bg-green-500 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0">
-                        <i class="fas fa-car-crash text-2xl"></i>
+        
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+            <div class="flex flex-col gap-8 w-full lg:w-1/2">
+                <!-- Accident Report Card -->
+                <div class="glass p-8 rounded-3xl hover:shadow-2xl transition-all">
+                    <div class="flex items-start mb-6">
+                        <div class="w-12 h-12 bg-green-500 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-car-crash text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold mb-2">🚨 Accident Report</h4>
+                            <p class="text-green-300 font-semibold">newAccident intent</p>
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="text-2xl font-bold mb-2">🚨 Accident Report</h4>
-                        <p class="text-green-300 font-semibold">newAccident intent</p>
+                    <div class="bg-black/30 p-6 rounded-2xl text-sm leading-relaxed">
+                        <strong>User:</strong> "LED broke down on Alfarabi st. Essentai"<br>
+                        <strong>Bot:</strong> "Emergency registered! Location: Alfarabi, Essentai area. Contact: +123456789"
                     </div>
                 </div>
-                <div class="bg-black/30 p-6 rounded-2xl text-sm leading-relaxed">
-                    <strong>User:</strong> "LED broke down on Alfarabi st. Essentai"<br>
-                    <strong>Bot:</strong> "Emergency registered! Location: Alfarabi, Essentai area. Contact: +123456789"
+                
+                <!-- New Lead Card -->
+                <div class="glass p-8 rounded-3xl hover:shadow-2xl transition-all">
+                    <div class="flex items-start mb-6">
+                        <div class="w-12 h-12 bg-blue-500 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-user-tie text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold mb-2">💼 New Lead</h4>
+                            <p class="text-blue-300 font-semibold">newLead intent</p>
+                        </div>
+                    </div>
+                    <div class="bg-black/30 p-6 rounded-2xl text-sm leading-relaxed">
+                        <strong>User:</strong> "Interested in putting advertisment on Cityboards."<br>
+                        <strong>Bot:</strong> "Perfect! Name? Company? Location? Period? → Lead created & forwarded to sales!"
+                    </div>
+                </div>
+                
+                <!-- Tech Support Card -->
+                <div class="glass p-8 rounded-3xl hover:shadow-2xl transition-all">
+                    <div class="flex items-start mb-6">
+                        <div class="w-12 h-12 bg-purple-500 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-headset text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold mb-2">🔧 Tech Support</h4>
+                            <p class="text-purple-300 font-semibold">newTech intent</p>
+                        </div>
+                    </div>
+                    <div class="bg-black/30 p-6 rounded-2xl text-sm leading-relaxed">
+                        <strong>User:</strong> "What is the model of LEDs?"<br>
+                        <strong>Bot:</strong> "Name? → Tech team assigned instantly"
+                    </div>
                 </div>
             </div>
             
-            <div class="glass p-8 rounded-3xl hover:shadow-2xl transition-all">
-                <div class="flex items-start mb-6">
-                    <div class="w-12 h-12 bg-blue-500 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0">
-                        <i class="fas fa-user-tie text-2xl"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-2xl font-bold mb-2">💼 New Lead</h4>
-                        <p class="text-blue-300 font-semibold">newLead intent</p>
-                    </div>
-                </div>
-                <div class="bg-black/30 p-6 rounded-2xl text-sm leading-relaxed">
-                    <strong>User:</strong> "Interested in putting advertisment on Cityboards."<br>
-                    <strong>Bot:</strong> "Perfect! Name? Company? Location? Period? → Lead created & forwarded to sales!"
-                </div>
-            </div>
-            
-            <div class="glass p-8 rounded-3xl hover:shadow-2xl transition-all">
-                <div class="flex items-start mb-6">
-                    <div class="w-12 h-12 bg-purple-500 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0">
-                        <i class="fas fa-headset text-2xl"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-2xl font-bold mb-2">🔧 Tech Support</h4>
-                        <p class="text-purple-300 font-semibold">newTech intent</p>
-                    </div>
-                </div>
-                <div class="bg-black/30 p-6 rounded-2xl text-sm leading-relaxed">
-                    <strong>User:</strong> "What is the model of LEDs?"<br>
-                    <strong>Bot:</strong> "Name? → Tech team assigned instantly"
-                </div>
+            <!-- Правый столбец: Вертикальное фото -->
+            <div class="w-full lg:w-1/2 ">
+                <img 
+                    src="../images/whatsapp_examples.jpeg" 
+                    alt="Cityboards real examples illustration"
+                    class="w-full h-full object-cover rounded-3xl shadow-2xl"
+                />
             </div>
         </div>
     </section>
